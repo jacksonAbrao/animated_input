@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Animado</title>
+</head>
+<style>
+    body {
+        background-color: #242329;
+        color: #ffffff;
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    fieldset {
+        border: none;
+    }
+
+    .animated-input-group {
+        position: relative;
+    }
+
+    .animated-input-group input {
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        font: inherit;
+        color: #ffffff;
+        background-color: transparent;
+        outline: 2px solid #ffffff;
+    }
+
+    .animated-input-group label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(10px, 10px);
+        transition: transform .25s;
+    }
+
+    .animated-input-group input:focus+.animated-input-label,
+    .animated-input-group input:valid+.animated-input-label{
+        transform: 
+            translate(0px, -14px)
+            scale(.8);
+        color: #d1c3fc;
+        padding-inline: 5px;
+        background-color: #242329;
+    }
+
+    .animated-input-group input:is(:focus, :valid) {
+        outline-color: #d1c5fc;
+    }
+
+</style>
+<body>
+    <div class="animated-input-group">
+        <input type="text" required name="nome" id="nome">
+        <label for="nome" class="animated-input-label">Nome</label>
+    </div>
+</body>
+</html>
