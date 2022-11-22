@@ -1,0 +1,87 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    font-size: 14px;
+    line-height: 18px;
+    border-radius: 5px;
+    padding: 8px 20px;
+    font-weight: 700;
+    border: 1px solid #5c1860;
+    background-color: #5c1860;
+    color: #FFFFFF;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    color: #FFFFFF;
+    border-color: #ffffff;
+    background-color: transparent;
+}
+
+.card {
+    padding: 2rem;
+    background-color: #242329;
+    border-radius: 20px;
+}
+
+.card .form-group {
+    padding-bottom: 2rem;
+}
+
+.animated-input-group {
+    position: relative;
+}
+
+.animated-input-group input {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font: inherit;
+    color: #ffffff;
+    background-color: transparent;
+    outline: 2px solid #ffffff;
+    width: 100%;
+}
+
+.animated-input-group label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(10px, 10px);
+    transition: transform .25s;
+}
+
+.animated-input-group input:focus+label,
+.animated-input-group input:valid+label,
+.animated-input-group label.invalid_input {
+    transform: 
+        translate(0px, -14px)
+        scale(.8);
+    color: #d1c3fc;
+    padding-inline: 5px;
+    background-color: #242329;
+}
+
+.animated-input-group input:is(:focus, :valid) {
+    outline-color: #d1c5fc;
+}
+
+.animated-input-group input:not(:valid).invalid_input {
+    outline-color: red;
+    color: red;
+}
+
+.animated-input-group input:not(:valid)+label.invalid_input {
+    color: red;
+}
